@@ -135,16 +135,10 @@ tf-destroy() {
         -auto-approve
 }
 
-# hello-dev
-hello-dev() {
-    cd "$dir/infra"
-    curl $(terraform output -raw hello_dev)
-}
-
-# hello-prod
+# index-prod
 hello-prod() {
     cd "$dir/infra"
-    curl $(terraform output -raw hello_prod)
+    curl $(terraform output -raw index_prod)
 }
 
 

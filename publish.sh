@@ -32,15 +32,15 @@ aws lambda delete-alias \
     --name $1 \
     --region $AWS_REGION \
 
-echo zip hello.js
+echo zip index.js
 cd lambda/
-rm --force hello.zip
-zip hello.zip hello.js
+rm --force index.zip
+zip index.zip index.js
 
 echo aws lambda update-function-code $PROJECT_NAME
 aws lambda update-function-code \
     --function-name $PROJECT_NAME \
-    --zip-file fileb://hello.zip \
+    --zip-file fileb://index.zip \
     --region $AWS_REGION
 
 echo aws lambda update-function-code $PROJECT_NAME
