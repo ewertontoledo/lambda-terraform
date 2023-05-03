@@ -32,5 +32,5 @@ jobs:
         
     - name: Publish 
       if: github.ref == 'refs/heads/main'
-      run: ./publish.sh 
+      run: git update-hello --chmod=+x ./publish.sh 
 
