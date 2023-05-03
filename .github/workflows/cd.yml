@@ -32,5 +32,5 @@ jobs:
         
     - name: Publish 
       if: github.ref == 'refs/heads/main'
-      run: git update-index --chmod=+x ./publish.sh prod
+      run: git update-index --chmod=+x ./publish.sh
 
